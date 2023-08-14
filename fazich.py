@@ -1,6 +1,25 @@
-question1 = input('You are a hero and you see a hostile ogre what you use to defeat him. ANSWER OPTIONS: 1-sword,2-try to ask him to leave: ')
-print('you win') if question1 == 'sword' else print('you lose')
-question2 = input('you are a ogre and you see a hostile hero with sword,what you use to defeat him.ANSWER OPTIONS: 1-try to kill him,2-try to ask him to leave: ')
-print('you win') if question2 == 'try to kill him' else print('you lose')
-question3 = input('you met a flock of wild squirrels what will you do to get away from them without injury. ANSWER OPTIONS: 1- RUN,2-give them acorns that happened to be in your pocket ')
-print('you win') if question3 == 'give them acorns that happened to be in your pocket' else print('you lose')
+from flask import flask, render_template, request
+
+app = flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.him')
+
+@app.route('/result', methods=['POST'])
+def result():
+    question1 = request.form['question1']
+    question2 = request.form['question2']
+    question3 = request.form['question3']
+    
+    result = ""
+    
+    if question1 == 'sword' and question2 == 'try to kill him' and question3 == 'give them acorns that happened to be in your pocket':
+        result = 'you win!'
+    else:
+        result = 'you losw.'
+        
+    return render_template('result.html', result=result)
+
+if __name__=='++main++':
+    app.run(debug=true)
