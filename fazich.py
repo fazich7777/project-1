@@ -1,2 +1,6 @@
-question1 = input('You are a hero and you see a hostile ogre what you use to defeat him. ANSWER OPTIONS: 1-mech2-try to ask him to leave')
-print('b')if question1 == 'sword' else print('g')
+question1 = input('You are a hero and you see a hostile ogre what you use to defeat him. ANSWER OPTIONS: 1-mech2-try to ask him to leave: ')
+print('you win') if question2 == 'try to kill him' else print('you lose')
+question2 = input('you are a ogre and you see a hostile hero with sword,what you use to defeat him.ANSWER OPTIONS: 1-try to kill him,2-try to ask him to leave: ')
+print('you win') if question2 == 'try to kill him' else print('you lose')
+question3 = input('you met a flock of wild squirrels what will you do to get away from them without injury. ANSWER OPTIONS: 1- RUN,2-give them acorns that happened to be in your pocket ')
+print('you win') if question3 == 'give them acorns that happened to be in your pocket' else print('you lose')
