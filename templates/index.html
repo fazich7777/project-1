@@ -2,23 +2,30 @@
 <html>
 <head>
     <title>Text Adventure Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1>Text Adventure Game</h1>
     <form action="/result" method="post">
         <p>You are a hero and you see a hostile ogre. What do you use to defeat him?</p>
-        <input type="radio" name="question1" value="mech">Mech<br>
+        <input type="radio" name="question1" value="Mech">Mech<br>
         <input type="radio" name="question1" value="ask">Try to ask him to leave<br>
 
         <p>You are an ogre and you see a hostile hero with a sword. What do you use to defeat him?</p>
-        <input type="radio" name="question2" value="kill">Try to kill him<br>
+        <input type="radio" name="question2" value="Try to kill him">Try to kill him<br>
         <input type="radio" name="question2" value="ask">Try to ask him to leave<br>
 
         <p>You met a flock of wild squirrels. What will you do to get away from them without injury?</p>
-        <input type="radio" name="question3" value="run">RUN<br>
-        <input type="radio" name="question3" value="acorns">Give them acorns that happened to be in your pocket<br>
+        <input type="radio" name="question3" value="RUN">RUN<br>
+        <input type="radio" name="question3" value="Give them acorns that happened to be in your pocket">Give them acorns that happened to be in your pocket<br>
 
         <input type="submit" value="Submit">
     </form>
 </body>
 </html>
+
+
+
+
+
+
